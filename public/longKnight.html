@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>repl.it</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body> 
+  
+	<div class="col-sm-6 col-md-6 col-lg-4">
+		<canvas id="myCanvas" width="512" height="512">
+			<img src="Board.png" style="border:1px solid black;" id="board">
+      
+     
+      <img src="Pieces/BlackPawn.png" id="BP">
+      <img src="Pieces/BlackBish.png" id="BB">
+      <img src="Pieces/BlackQueen.png" id="BQ">
+      <img src="Pieces/BlackKing.png" id="BK">
+      <img src="Pieces/BlackRook.png" id="BR">
+      <img src="Pieces/BlackKnight.png" id="BN">
+      <img src="Pieces/WhitePawn.png" id="WP">
+      <img src="Pieces/WhiteBish.png" id="WB">
+      <img src="Pieces/WhiteQueen.png" id="WQ">
+      <img src="Pieces/WhiteKing.png" id="WK">
+      <img src="Pieces/WhiteRook.png" id="WR">
+      <img src="Pieces/WhiteKnight.png" id="WN">
+
+    </canvas>
+        <input class="modal-btn" type="checkbox" id="modal-btn" name="modal-btn"/>
+        <label for="modal-btn"></label> 		
+        <div class="modal">		
+          <div class="modal-wrap">	
+            <p>Checkmate</p>	          		
+          </div>			          		
+        </div>	
+       
+
+    <script src="PieceClasses/Piece.js"></script>
+    <script src="PieceClasses/bish.js"></script>
+    <script src="PieceClasses/longKnight.js"></script>
+    <script src="PieceClasses/king.js"></script>
+    <script src="PieceClasses/pawn.js"></script>
+    <script src="PieceClasses/queen.js"></script>
+    <script src="PieceClasses/rook.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="longKnight.js"></script>
+  </div>
+  <h1 id= "line"></h1>
+
+  <p>Please select your promotion piece:</p>
+   <form>
+     <input type="radio" id="q" name="pieceType" value="1" checked="checked">
+      <label for="queen">Queen</label><br>
+      <input type="radio" id="r" name="pieceType" value="2">
+      <label for="rook">Rook</label><br>  
+      <input type="radio" id="b" name="pieceType" value="3">
+      <label for="bish">Bishop</label><br>  
+      <input type="radio" id="n" name="pieceType" value="4">
+      <label for="knight">Knight</label><br>  
+    </form> 
+  <br>
+
+  </body>
+</html>
